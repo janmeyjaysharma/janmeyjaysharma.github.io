@@ -64,9 +64,6 @@
     }
   }
 
-
-
-    
     /*Carousel Section */
     .container1 {
       display: -webkit-box;
@@ -572,7 +569,8 @@
       </div>
 
       <div class="col-lg-8 mt-5 mt-lg-0">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <!-- Updated form with Formspree and reCAPTCHA -->
+        <form action="https://formspree.io/f/xnnayzoa" method="POST">
           <div class="row">
             <div class="col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -587,13 +585,19 @@
           <div class="form-group mt-3">
             <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
           </div>
-          
-          <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
+          <div class="text-center mt-3">
+            <button type="submit" style="
+              background-color: #3373DC; /* Blue color */
+              color: white; /* White text */
+              padding: 12px 30px; /* Padding for size */
+              border: none; /* Remove border */
+              border-radius: 50px; /* Rounded corners */
+              font-size: 16px; /* Font size */
+              font-weight: bold; /* Bold text */
+              cursor: pointer; /* Pointer cursor on hover */
+              text-align: center; /* Center text */
+              transition: background-color 0.3s ease; /* Smooth transition */
+            ">Send Message</button></div>
         </form>
       </div>
     </div>
@@ -603,8 +607,6 @@
 </main>
 <!-- End #main -->
 
-
-    
     <!-- ======= Footer ======= -->
     <footer id="footer">
       <div class="container">
@@ -640,6 +642,9 @@
     
     <!-- carousel JS File -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
     <!-- carousel JS  -->
     <script>
