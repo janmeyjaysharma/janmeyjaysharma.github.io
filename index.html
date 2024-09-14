@@ -49,6 +49,23 @@
       width:23rem;
       height: 25rem;
     }
+    /* Center the image on mobile devices */
+    @media (max-width: 768px) {
+    #about .col-lg-4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #about .img-fluid {
+      max-width: 80%;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+
+
+
     
     /*Carousel Section */
     .container1 {
