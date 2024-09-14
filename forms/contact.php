@@ -9,24 +9,6 @@
   // Replace contact@example.com with your real receiving email address
 $receiving_email_address = 'contact@janmeyjaysharma@gmail.com';
 
-// reCAPTCHA secret key
-$secretKey = "6LfhykIqAAAAAlsGrsWyQpijzIsaRLx9uf9vBRpd";
-
-// reCAPTCHA response verification
-if (isset($_POST['g-recaptcha-response'])) {
-    $recaptchaResponse = $_POST['g-recaptcha-response'];
-    $userIp = $_SERVER['REMOTE_ADDR'];
-    
-    $verification = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$recaptchaResponse&remoteip=$userIp");
-    $recaptchaResult = json_decode($verification);
-
-    if (!$recaptchaResult->success) {
-        die('Failed reCAPTCHA verification');
-    }
-} else {
-    die('reCAPTCHA verification required');
-}
-
   
   
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
