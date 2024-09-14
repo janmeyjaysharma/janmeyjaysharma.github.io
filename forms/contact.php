@@ -7,10 +7,10 @@
   */
 
   // Replace contact@example.com with your real receiving email address
-$receiving_email_address = 'janmeyjaysharma@gmail.com';
+$receiving_email_address = 'contact@janmeyjaysharma@gmail.com';
 
 // reCAPTCHA secret key
-$secretKey = "6LfPc4soAAAAAE9jYZI54p8fBOeApCyLWTaSDg_7";
+$secretKey = "6LfhykIqAAAAAlsGrsWyQpijzIsaRLx9uf9vBRpd";
 
 // reCAPTCHA response verification
 if (isset($_POST['g-recaptcha-response'])) {
